@@ -1,0 +1,21 @@
+<html>
+<head>
+		<title>Bloggy: {{ single_entry.title }}</title>
+</head>
+<body>
+<h2>{{	single_entry.title	}}</h2>
+<ul>
+		<p><em>{{ single_entry.created_at }}</em></p>
+		<p>{{	single_entry.content }}</p>
+		<p>{{	single_entry.tag }}</p>
+		<p>{{	single_entry.views }}</p>
+		<br>
+		<p>
+			{% if single_entry.image %}
+				<img src="/media/{{ single_entry.image }}">
+			{% endif %}
+		</p>
+</ul>
+<p>Had enough? Return	<a href="/">home</a>.</p><br/>
+</body>
+</html>

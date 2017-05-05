@@ -1,0 +1,9 @@
+<h1> Learn By Rankings </h1>
+{% if latest_entries %}
+<ul>
+{% for entry in latest_entries %}
+  <h3><a href='/{{ entry.url }}'>{{ entry.title }}</a></h3>
+  <li>{{ entry.content }} | {{ entry.created_at }} </li>
+{% endfor %}
+</ul>
+{% endif %}
